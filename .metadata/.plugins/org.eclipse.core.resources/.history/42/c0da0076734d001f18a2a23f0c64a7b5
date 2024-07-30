@@ -1,0 +1,35 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo1 {
+	public static void main(String[] args) {
+		ChromeDriver ch = new ChromeDriver();
+		ch.get("http://www.google.com");
+		ch.manage().window().maximize();
+		ch.findElement(By.id("APjFqb")).sendKeys("flipkart");
+		ch.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[4]/center/input[1]")).click();
+	}
+}
+
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//
+//public class Demo1 {
+//    public static void main(String[] args) {
+//        ChromeDriver ch = new ChromeDriver();
+//        ch.get("http://www.google.com");
+//        ch.manage().window().maximize();
+//
+//        // Enter text in the search box
+//        ch.findElement(By.name("q")).sendKeys("flipkart");
+//
+//        // Click on the Google Search button
+//        ch.findElement(By.name("btnK")).click();
+//        
+//        // Optionally, you might want to wait for some time or perform further actions
+//        // ...
+//
+//        // Close the browser
+//        ch.quit();
+//    }
+//}
